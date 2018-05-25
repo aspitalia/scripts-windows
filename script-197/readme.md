@@ -42,6 +42,6 @@ public class Program
 
 Una volta creata e deployata l'applicazione, è possibile invocarla direttamente dal prompt dei comandi (oppure da PowerShell) tramite il suo nome ma, poiché si tratta di un'app UWP, è anche possibile vederla registrata all'interno del menù start oppure distribuirla tramite il Windows Store.
 
-![Prompt dei comandi](https://imgur.com/a/PjWUIvu)
+![Prompt dei comandi](https://preview.ibb.co/geq9Vo/197.png)
 
 Il codice sorgente di questo script è disponibile su GitHub al seguente indirizzo https://github.com/aspitalia/scripts-windows/tree/master/script-197.
