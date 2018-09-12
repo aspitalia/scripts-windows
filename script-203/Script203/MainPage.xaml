@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="Script203.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Script203"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <PersonPicture
+                DisplayName="{x:Bind DisplayNameRadioButton.IsChecked, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter='ASPItalia.com'}"
+                Initials="{x:Bind InitialsRadioButton.IsChecked, Mode=OneWay, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter='AI'}"
+                ProfilePicture="{Binding ElementName=ProfileImageRadioButton, Path=IsChecked, Converter={StaticResource BooleanToVisibilityConverter}, ConverterParameter='Assets\\aspitalia.png'}" />
+
+            <StackPanel Margin="0,50,0,0" HorizontalAlignment="Center">
+                <RadioButton x:Name="DisplayNameRadioButton" Content="Display name" />
+                <RadioButton x:Name="InitialsRadioButton" Content="Iniziali" />
+                <RadioButton
+                    x:Name="ProfileImageRadioButton"
+                    Content="Immagine di profilo"
+                    IsChecked="True" />
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <PersonPicture Contact="{x:Bind CurrentContact, Mode=OneWay}" />
+
+            <Button
+                Margin="0,50,0,0"
+                HorizontalAlignment="Center"
+                Click="OnLoadContact"
+                Content="Carica contatto" />
+        </StackPanel>
+
+    </Grid>
+</Page>
