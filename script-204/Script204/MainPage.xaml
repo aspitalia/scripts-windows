@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="Script204.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Script204"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d">
+
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <PersonPicture BadgeGlyph="&#xE778;" ProfilePicture="Assets\profile-picture.png" />
+
+        <TextBlock
+            Grid.Column="1"
+            Margin="50,0,0,0"
+            VerticalAlignment="Center"
+            FontSize="32"
+            Text="Mario Rossi" />
+    </Grid>
+</Page>
